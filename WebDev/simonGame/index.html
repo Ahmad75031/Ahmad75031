@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link
+			href="https://fonts.googleapis.com/css?family=Press+Start+2P"
+			rel="stylesheet"
+		/>
+		<link href="styles.css" rel="stylesheet" />
+		<title>Simon Game</title>
+	</head>
+	<body>
+		<h1>Press A Key to Start</h1>
+		<div class="boxes">
+			<div id="green" class="box"><audio src="sounds/green.mp3"></audio></div>
+			<div id="red" class="box"><audio src="sounds/red.mp3"></audio></div>
+			<div id="yellow" class="box"><audio src="sounds/yellow.mp3"></audio></div>
+			<div id="blue" class="box"><audio src="sounds/blue.mp3"></audio></div>
+		</div>
+		<audio src="sounds/wrong.mp3" id="wrong"></audio>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>

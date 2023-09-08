@@ -1,0 +1,39 @@
+body {
+	background-color: #011f3f;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 50px;
+}
+h1 {
+	font-family: "Press Start 2P";
+	color: #fef2bf;
+	font-size: 3rem;
+	margin: 30px;
+	margin-top: 90px;
+}
+.boxes {
+	margin-top: 20px;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 50px;
+}
+.box {
+	width: 200px;
+	height: 200px;
+	border: 10px solid;
+	border-radius: 20%;
+}
+#green {
+	background-color: green;
+}
+#blue {
+	background-color: blue;
+}
+#red {
+	background-color: red;
+}
+#yellow {
+	background-color: yellow;
+}

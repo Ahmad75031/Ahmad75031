@@ -1,0 +1,29 @@
+body {
+	background-color: #393e46;
+	text-align: center;
+}
+
+.container {
+	height: 100vh;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	gap: 30px;
+}
+h1 {
+	font-size: 8rem;
+	font-family: "Lobster", cursive;
+	color: #4ecca3;
+	text-shadow: 5px 0 #232931;
+}
+p {
+	font-size: 2rem;
+	color: #4ecca3;
+	font-family: "Indie Flower", cursive;
+}
+@media (max-width: 600px) {
+	img {
+		width: 100px;
+		height: 100px;
+	}
+}
