@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital@0;1&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<link href="styles/styles.css" rel="stylesheet" />
+		<title>TODO</title>
+	</head>
+	<body>
+		<div class="nav">
+			<a href="/Home">Home</a>
+			<a href="/work">Work</a>
+		</div>
+		<div class="tasks">
+			<div class="items">
+				<div class="list-heading"><%=list%> List</div>
+				<div class="input-form">
+					<form action="/add" method="post">
+						<input type="hidden" name="list" value="<%=list%>" />
+						<input name="task" type="text" placeholder="Enter new Task" />
+						<button type="submit" class="btn my-btn">+</button>
+					</form>
+				</div>
+				<% if(locals.tasks) {%> <% tasks.forEach((t) =>{%>
+				<div class="item">
+					<p id="<%= t.id %>">
+						<input class="form-check-input check" type="checkbox" />
+						<%=t.task%>
+					</p>
+
+					<hr />
+				</div>
+				<%}) %> <% } %>
+			</div>
+			<a id="remove">Remove checked Tasks</a>
+		</div>
+		<script>
+			$("input:checkbox").change(function () {
+				if ($(this).is(":checked")) {
+					$(this).parent().addClass("checked");
+				} else {
+					$(this).parent().removeClass("checked");
+				}
+			});
+			$("#remove").on("click", () => {
+				var tasks = document.querySelectorAll(".checked");
+				tasks.forEach((i) => {
+					var listType = $(".list-heading").html();
+					fetch(`/delete/${i.id}`, {
+						method: "DELETE",
+					});
+					location.reload();
+				});
+			});
+		</script>
+	</body>
+</html>

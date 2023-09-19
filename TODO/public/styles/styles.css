@@ -1,0 +1,127 @@
+body {
+	background-color: #e5e5f7;
+	opacity: 1;
+	background-image: radial-gradient(#a9def9 0.5px, transparent 0.5px),
+		radial-gradient(#e4c1f9 0.5px, #ede4ff 0.5px);
+	background-size: 20px 20px;
+	background-position: 0 0, 10px 10px;
+	font-family: "Comic Neue", cursive;
+	padding: 15px;
+}
+a {
+	text-decoration: none;
+	color: #a076f9;
+	&:hover {
+		font-size: 2rem;
+		cursor: pointer;
+	}
+	&:active {
+		color: #e4c1f9;
+	}
+}
+.nav {
+	font-size: 1.7rem;
+	font-weight: 600;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 50px;
+}
+.tasks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	font-family: cursive;
+	color: #e4c1f9;
+}
+.items {
+	margin-top: 100px;
+	display: flex;
+	flex-direction: column;
+	width: 400px;
+	height: 500px;
+	background-color: #f8f4ff;
+	align-items: center;
+	gap: 20px;
+	border-radius: 15px 15px 0 0;
+	padding-top: 0px;
+}
+.items p {
+	font-size: 1.2rem;
+	padding: 0;
+	margin: 0;
+}
+
+.input-form {
+	width: 100%;
+	height: 50px;
+	margin: 0;
+}
+.input-form input {
+	margin: 2px;
+	background-color: #fff;
+	text-align: left;
+	padding: 5px;
+	width: 300px;
+	border-radius: 10px;
+	height: 50px;
+	border: 0;
+	font-family: "Comic Neue";
+	font-size: 1.3rem;
+	color: #a076f9;
+}
+.list-heading {
+	width: 400px;
+	background-color: #a076f9;
+	text-align: center;
+	color: white;
+	padding: 15px 0;
+	margin: 0;
+	font-size: 28px;
+	border-radius: 15px 15px 0 0;
+	font-weight: bolder;
+}
+.my-btn {
+	text-align: center;
+	font-family: monospace;
+	background-color: #a076f9;
+	color: #fff;
+	font-size: 2rem;
+	border-radius: 100%;
+	padding: 0;
+	margin: 0;
+	width: 50px;
+	height: 50px;
+}
+form {
+	padding: 5px;
+	padding-left: 10px;
+}
+.item {
+	width: 95%;
+	text-align: left;
+	color: #a076f9;
+}
+.item p {
+	display: inline;
+}
+hr {
+	margin: 0;
+	padding: 0;
+	border: 1px solid #a076f9;
+}
+.checked {
+	text-decoration: line-through;
+}
+#remove {
+	color: #a076f9;
+	user-select: none;
+
+	&:hover {
+		font-size: 1.2rem;
+		cursor: pointer;
+	}
+	&:active {
+		color: #e4c1f9;
+	}
+}
